@@ -68,11 +68,148 @@
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
 # Delete existing data, so you'll start fresh each time this script is run.
-# Use `Model.destroy_all` code.
-# TODO!
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
 
 # Generate models and tables, according to the domain model.
-# TODO!
+studio = Studio.new
+studio["name"] = "Warner Bros."
+studio.save
+puts studio.inspect
+
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["year_released"] = 2005
+movie["rated"] = "PG-13"
+movie["studio_id"] = studio["id"]
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Knight"
+movie["year_released"] = 2008
+movie["rated"] = "PG-13"
+movie["studio_id"] = studio["id"]
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Knight Rises"
+movie["year_released"] = 2012
+movie["rated"] = "PG-13"
+movie["studio_id"] = studio["id"]
+movie.save
+puts movie.inspect
+
+actor = Actor.new
+actor["name"] = "Christian Bale"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Liam Neeson"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Katie Holmes"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Gary Oldman"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Heath Ledger"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Aaron Eckhart"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Maggie Gyllenhaal"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Tom Hardy"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Joseph Gordon-Levitt"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Anne Hathaway"
+actor.save
+actor.inspect
+puts actor.inspect
+
+role = Role.new
+role["character_name"] = "Bruce Wayne"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Alfred"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Ra's Al Ghul"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Rachel Dawes"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Comissioner Gordon"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Joker"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Harvey Dent"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Bane"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "John Blake"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
+role = Role.new
+role["character_name"] = "Selina Kyle"
+role["movie_id"] =
+role["actor_id"] = 
+role.save
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
