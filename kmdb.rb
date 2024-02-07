@@ -71,6 +71,7 @@
 Studio.destroy_all
 Movie.destroy_all
 Actor.destroy_all
+Character.destroy_all
 
 # Generate models and tables, according to the domain model.
 studio = Studio.new
@@ -237,6 +238,102 @@ selina_kyle["movie_id"] = the_dark_knight_rises["id"]
 selina_kyle["actor_id"] = anne_hathaway["id"]
 selina_kyle.save
 
+# Batman Begins Roles
+character = Character.new
+character["movie_id"] = batman_begins["id"]
+character["actor_id"] = christian_bale["id"]
+character["character_name"] = "Bruce Wayne"
+character.save
+
+character = Character.new
+character["movie_id"] = batman_begins["id"]
+character["actor_id"] = michael_caine["id"]
+character["character_name"] = "Alfred"
+character.save
+
+character = Character.new
+character["movie_id"] = batman_begins["id"]
+character["actor_id"] = liam_neeson["id"]
+character["character_name"] = "Ra's Al Ghul"
+character.save
+
+character = Character.new
+character["movie_id"] = batman_begins["id"]
+character["actor_id"] = katie_holmes["id"]
+character["character_name"] = "Rachel Dawes"
+character.save
+
+
+character = Character.new
+character["movie_id"] = batman_begins["id"]
+character["actor_id"] = gary_oldman["id"]
+character["character_name"] = "Commissioner Gordon"
+character.save
+
+
+# The Dark Knight Roles
+character = Character.new
+character["movie_id"] = the_dark_knight["id"]
+character["actor_id"] = christian_bale["id"]
+character["character_name"] = "Bruce Wayne"
+character.save
+
+role = Role.new
+character = Character.new
+character["movie_id"] = the_dark_knight["id"]
+character["actor_id"] = heath_ledger["id"]
+character["character_name"] = "Joker"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight["id"]
+character["actor_id"] = aaron_eckhart["id"]
+character["character_name"] = "Harvey Dent"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight["id"]
+character["actor_id"] = michael_caine["id"]
+character["character_name"] = "Alfred"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight["id"]
+character["actor_id"] = maggie_gyllenhaal["id"]
+character["character_name"] = "Rachel Dawes"
+character.save
+
+# The Dark Knight Rises Roles
+character = Character.new
+character["movie_id"] = the_dark_knight_rises["id"]
+character["actor_id"] = christian_bale["id"]
+character["character_name"] = "Bruce Wayne"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight_rises["id"]
+character["actor_id"] = gary_oldman["id"]
+character["character_name"] = "Commissioner Gordon"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight_rises["id"]
+character["actor_id"] = tom_hardy["id"]
+character["character_name"] = "Bane"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight_rises["id"]
+character["actor_id"] = joseph_gordon_levitt["id"]
+character["character_name"] = "John Blake"
+character.save
+
+character = Character.new
+character["movie_id"] = the_dark_knight_rises["id"]
+character["actor_id"] = anne_hathaway["id"]
+character["character_name"] = "Selina Kyle"
+character.save
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
@@ -249,6 +346,7 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
 
 # Prints a header for the cast output
 puts ""
