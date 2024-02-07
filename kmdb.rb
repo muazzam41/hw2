@@ -71,6 +71,7 @@
 Studio.destroy_all
 Movie.destroy_all
 Actor.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 
@@ -277,7 +278,7 @@ all_roles = Role.all
 
 for role in all_roles
     name = role["character_name"]
-    movie_roles = Movie.find_by({"id" => role["movie_id"]})
-    actor_roles = Actor.find_by({"id" => role["actor_id"]})
-    puts "#{name} #{movie_roles} #{actor_roles}"
+    movie_roles = Movie.find(role["movie_id"])
+    actor_roles = Actor.find(role["actor_id"])
+    puts "#{movie_roles["title"]} #{actor_roles["name"]} #{name}"
 end
